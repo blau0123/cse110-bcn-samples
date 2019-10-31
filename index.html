@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Beacon @ UCSD</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the font Poppins and Roboto from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- jquery for animations! -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- import the webpage's javascript file --> 
+    <script src="/script.js" defer></script> 
+  </head>
+  <body>
+    <div class="header">
+        <div class="navbar">
+            <div class="navbar-text-container">
+                <h1 class="navbar-text">BCN</h1>
+            </div>
+            <div class="profile-pic-container">
+                <img class="profile-pic" src="images/profile-pic-temp.png" width="30" height="30" />
+            </div>
+        </div>
+        <h1>Find Events For You</h1>
+    </div>
+    <div class="choose-event-type">
+        <h3 class="event-type tablink" id="defaultOpen" onclick="openTab(recEvents, this)">Recommended</h3>
+        <h3 class="event-type tablink" onclick="openTab(expEvents, this)">Explore</h3>
+    </div>
+    <div class="rec-event-list tabcontent" id="recEvents">
+        <ul class="list">
+            <li class="event-item scroll">
+                <a class="event-direct" href="./events/test.html">
+                    <h3>Come play games with me plz</h3>
+                    <h5>Location</h5>
+                    <h5>Short description</h5>
+                </a>
+            </li>
+            <li class="event-item scroll">
+                    <a class="event-direct" href="./events/test.html">
+                        <h3>Come play games with me plz</h3>
+                        <h5>Location</h5>
+                        <h5>Short description</h5>
+                    </a>
+            </li>
+            <li class="event-item scroll">
+                    <a class="event-direct" href="./events/test.html">
+                        <h3>Come play games with me plz yeet</h3>
+                        <h5>Location</h5>
+                        <h5>Short description</h5>
+                    </a>
+            </li>
+            <li class="event-item scroll">
+                    <a class="event-direct" href="./events/test.html">
+                        <h3>Come play games with me plz</h3>
+                        <h5>Location</h5>
+                        <h5>Short description</h5>
+                    </a>
+            </li>
+            <li class="event-item scroll">
+                    <a class="event-direct" href="./events/test.html">
+                        <h3>Come play</h3>
+                        <h5>Location</h5>
+                        <h5>Short description</h5>
+                    </a>
+            </li>
+            <li class="event-item scroll">
+                    <a class="event-direct" href="./events/test.html">
+                        <h3>Come play</h3>
+                        <h5>Location</h5>
+                        <h5>Short description</h5>
+                    </a>
+            </li>
+            <li class="event-item scroll">
+                    <a class="event-direct" href="./events/test.html">
+                        <h3>Yeet</h3>
+                        <h5>Location</h5>
+                        <h5>Short description</h5>
+                    </a>
+            </li>
+            <li class="event-item scroll">
+                    <a class="event-direct" href="./events/test.html">
+                        <h3>Come play games with me plz</h3>
+                        <h5>Location</h5>
+                        <h5>Short description</h5>
+                    </a>
+            </li>
+        </ul>
+    </div>
+    <div class="exp-event-list tabcontent" id="expEvents">
+        <ul class="list">
+            <li class="event-item scroll">
+                <a class="event-direct" href="./events/test.html">
+                    <h3>explore!</h3>
+                    <h5>Location</h5>
+                    <h5>Short description</h5>
+                </a>
+            </li>
+            <li class="event-item scroll">
+                <a class="event-direct" href="./events/test.html">
+                    <h3>explore!</h3>
+                    <h5>Location</h5>
+                    <h5>Short description</h5>
+                </a>
+            </li>
+            <li class="event-item scroll">
+                <a class="event-direct" href="./events/test.html">
+                    <h3>explore!</h3>
+                    <h5>Location</h5>
+                    <h5>Short description</h5>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        $(".header").hide().fadeIn(1500);  
+        
+        // allows fade the elements in while scrolling down
+        $(window).scroll(function(){
+            $(".scroll").each(function(i){
+            let bottom_of_object = $(this).position().top + $(this).outerHeight();
+            let bottom_of_window = $(window).scrollTop() + ($(window).height() + 200);
+            if( bottom_of_window >= bottom_of_object ){
+                $(this).animate({'opacity':'1'}, 800);          
+            }
+            })
+        })
+    })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+
+    height: 100vh;
+    background-attachment: fixed;
+    background-image: url("./images/lighthouse2-wallpaper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.choose-event-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-type{
+    margin: 20px 0 20px 20px;
+}
+
+.navbar{
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background:rgba(255,255,255, 0.9);
+
+    position: fixed;
+    top: 0;
+    width: 90%;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.profile-pic-container{
+    position: absolute;
+    right: 20px;
+}
+
+.profile-pic{
+    float:right;
+}
+
+.navbar-text{
+    color: black;
+    font-size: 20px;
+}
+
+.event-item{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.event-direct{
+    text-decoration: none;
+    color: black;
+}
+
+.event-item:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.rec-event-list{
+    padding: 20px;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.list-header{
+    /* to align elements vertically and horizontally */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
